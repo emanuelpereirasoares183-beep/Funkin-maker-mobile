@@ -791,6 +791,9 @@ else if(a==='msg')copyReply(p)
 else if(a==='cat'){await navigator.clipboard.writeText(catLine(p)+',');toast('Linha copiada. Cole em "mods" do catálogo e troque o link.')}
 else if(a==='exp')exportProject(p)
 else if(a==='del'&&await ask('Excluir envio?',{text:'"'+p.name+'" será apagado deste aparelho.',ok:'Excluir',danger:true})){await DB.del(p.id);toast('Envio excluído.');initOwner()}}catch(er){toast('Erro: '+er.message,'err')}};
+/* ===== avisos de erro na tela (em vez de fechar o app) ===== */
+addEventListener('error',e=>{try{toast('Erro: '+(e.message||'desconhecido'),'err')}catch(x){}});
+addEventListener('unhandledrejection',e=>{try{toast('Erro: '+((e.reason&&e.reason.message)||e.reason||'desconhecido'),'err')}catch(x){}});
 /* ===== instalação do app (PWA) ===== */
 let dip=null;const standalone=()=>matchMedia('(display-mode: standalone)').matches||navigator.standalone===true,isIOS=/iphone|ipad|ipod/i.test(navigator.userAgent);
 function instBtn(){const b=$('#instbtn');if(b)b.style.display=!standalone()&&(dip||isIOS)?'':'none'}
