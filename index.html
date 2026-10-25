@@ -162,14 +162,14 @@ nav button.on{color:var(--cy);box-shadow:none;background:#27e6ff18}
 <div class=bar id=cp><button data-p=0 class=on>Parado</button><button data-p=1>← Esq.</button><button data-p=2>↓ Baixo</button><button data-p=3>↑ Cima</button><button data-p=4>→ Dir.</button><button data-p=5>✕ Erro</button></div>
 <div class=bar><label>Nome<input id=cn maxlength=24></label><label>Cor 1<input type=color id=c1></label><label>Cor 2<input type=color id=c2></label><label>Animação<select id=ca><option value=bounce>Pulinho<option value=shake>Tremida<option value=sway>Balanço<option value=none>Nenhuma</select></label></div>
 <div class=bar><label>Tamanho<input type=range id=cs min=.5 max=1.6 step=.05></label><label>Posição horizontal<input type=range id=cx min=5 max=95></label><label>Posição vertical<input type=range id=cy min=40 max=95></label></div>
-<div class=bar><button id=ci>Importar PNG da pose</button><button id=cr2>Remover PNG da pose</button><button id=co>Usar como oponente</button><button id=cj>Usar como jogador</button><button class="btn d" id=cd>Excluir</button></div></section>
+<div class=bar><button id=ci>Importar imagem da pose</button><button id=cr2>Remover imagem da pose</button><button id=co>Usar como oponente</button><button id=cj>Usar como jogador</button><button class="btn d" id=cd>Excluir</button></div></section>
 <section class=scr id=s-stage><canvas id=sc></canvas><p class=mu>Arraste na prévia ou use o painel de baixo para mover fundo, personagens e objetos.</p>
 <div class=bar><button class=btn id=sp>▶ Prévia da batalha</button></div>
 <div class=bar><label>Cenário<select id=sb></select></label><label>Oponente<select id=so></select></label><label>Jogador<select id=sj></select></label></div>
 <p class=mu>Efeitos visuais</p><div class=bar id=fx><button data-f=flash>Pisca na batida</button><button data-f=zoom>Zoom na batida</button><button data-f=particles>Partículas</button><button data-f=scan>Linhas de TV</button></div>
 <div id=mvp><div id=mvh><div id=mvl></div><button id=mvt>▾</button></div>
 <div id=mvc><button data-d="-1,0">←</button><button data-d="0,-1">↑</button><button data-d="0,1">↓</button><button data-d="1,0">→</button><button data-z="-1">−</button><button data-z="1">+</button><button id=mvr>↺</button><span id=mvx style="display:contents"></span><span id=mvi class=mu></span></div></div></section>
-<section class=scr id=s-imp><p class=mu>Imagens PNG, JPG, WebP ou GIF (até 5 MB) · áudio MP3, OGG, WAV ou M4A (até 30 MB) · projetos .zip ou .json do Funkin Maker.</p>
+<section class=scr id=s-imp><p class=mu>Imagens PNG, JPG, WebP, AVIF, BMP ou animações GIF/WebP/APNG (até 12 MB) · áudio MP3, OGG, WAV ou M4A (até 30 MB) · projetos .zip ou .json do Funkin Maker.</p>
 <div class=hg1><button id=i1></button><button id=i2>Imagem de fundo da fase</button><button id=i3>Imagem de capa do projeto</button><button id=i4>Música do projeto</button><label class="pk btn" id=i5 style="min-height:48px">Importar projeto (.zip ou .json)<input type=file id=i5f accept=".zip,.json,application/zip,application/x-zip-compressed,application/json,application/octet-stream"></label></div></section>
 <section class=scr id=s-hub><p class=mu>Mods verificados pelo desenvolvedor e publicados por outras pessoas. Quer ver o seu aqui? Em <b>Meus projetos</b>, toque em <b>📤 Enviar p/ análise</b>.</p><div class=bar><button id=hubr>↻ Atualizar</button></div><div id=hubl></div></section>
 <section class=scr id=s-owner><p class=mu>Aqui chegam os mods enviados para análise. Quando alguém enviar, você recebe um arquivo <b>.fmm.zip</b> (WhatsApp, e-mail etc.). Salve o arquivo no aparelho e toque em <b>Receber mod</b>.</p>
@@ -201,10 +201,10 @@ nav button.on{color:var(--cy);box-shadow:none;background:#27e6ff18}
 <div class=nvch id=nchb>—</div><div class=nvtime><b id=nti>0:00</b></div></div></div>
 <div class=nvbt><button class=nvk id=novr title="Voltar ao início">⏮</button><div class=nvmid><button class=nvk id=novp title="Ouvir" style="color:#1f8a43">▶</button><button class=nvk id=novs title="Pausar" style="opacity:.5">⏸</button></div><button class=nvk id=novb title="Concluir">⌂</button></div></div>
 <div id=gro><div class=bar style="margin:0 0 8px"><button class=btn id=grob>✓ Concluir</button><span class=mu style="flex:1">Gráficos do mod</span></div>
-<p class=mu>Jogador — PNGs das poses</p><div class=pzg id=pzpl></div>
-<p class=mu>Oponente — PNGs das poses</p><div class=pzg id=pzop></div>
+<p class=mu>Jogador — imagens das poses (PNG, GIF animado, WebP…)</p><div class=pzg id=pzpl></div>
+<p class=mu>Oponente — imagens das poses (PNG, GIF animado, WebP…)</p><div class=pzg id=pzop></div>
 <p class=mu>Fundo do mod</p><div class=bar id=nbg><button data-b=neon class=on>Neon</button><button data-b=street>Rua</button><button data-b=stage>Palco</button><button data-b=grid>Grade retrô</button></div>
-<div class=bar style="align-items:center"><label class=pk id=nbgl>🖼 Usar minha imagem<input type=file id=nbgf accept=".png,.jpg,.jpeg,.webp,.gif"></label><button id=nbgx style="display:none">✕</button><span id=nbgn class=mu></span></div>
+<div class=bar style="align-items:center"><label class=pk id=nbgl>🖼 Usar minha imagem<input type=file id=nbgf accept="image/*,.png,.jpg,.jpeg,.webp,.gif,.apng,.avif,.bmp"></label><button id=nbgx style="display:none">✕</button><span id=nbgn class=mu></span></div>
 <img id=nbgp alt="" style="width:100%;max-width:300px;border-radius:12px;border:2px solid #3b2f75;display:block;margin:4px 0 8px">
 <button class=btn id=pvopen style="width:100%;min-height:60px;font-size:17px;margin:8px 0">🖼 Ver a tela do mod</button></div>
 <div id=pvo style="display:none;position:fixed;inset:0;z-index:60;background:#0c0820;flex-direction:column;padding:env(safe-area-inset-top,0) 0 env(safe-area-inset-bottom,0)">
@@ -225,7 +225,7 @@ nav button.on{color:var(--cy);box-shadow:none;background:#27e6ff18}
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],md=(a,b)=>((a%b)+b)%b,cl=(v,a,b)=>Math.max(a,Math.min(b,v));
 const esc=s=>String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 const COL=['#c24bff','#27e6ff','#8bff3d','#ff4d5e'],ROT=[-Math.PI/2,Math.PI,0,Math.PI/2],GL=['←','↓','↑','→'];
-const MIME={png:'image/png',jpg:'image/jpeg',jpeg:'image/jpeg',webp:'image/webp',gif:'image/gif',mp3:'audio/mpeg',ogg:'audio/ogg',wav:'audio/wav',m4a:'audio/mp4',aac:'audio/aac',opus:'audio/ogg',webm:'audio/webm'};
+const MIME={png:'image/png',jpg:'image/jpeg',jpeg:'image/jpeg',webp:'image/webp',gif:'image/gif',apng:'image/apng',avif:'image/avif',bmp:'image/bmp',mp3:'audio/mpeg',ogg:'audio/ogg',wav:'audio/wav',m4a:'audio/mp4',aac:'audio/aac',opus:'audio/ogg',webm:'audio/webm'};
 const dpr=Math.min(devicePixelRatio||1,2),uid=()=>Math.random().toString(36).slice(2,9)+Date.now().toString(36);
 const fmt=s=>Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0');
 let cfg={vol:.8,off:0,vib:true};try{Object.assign(cfg,JSON.parse(localStorage.getItem('fmm_cfg')||'{}'))}catch(e){}
@@ -262,7 +262,8 @@ function sfx(t,notes=true){const s=Math.floor(t*P.bpm/15);while(clk.ls<s){const 
 function stopAll(){clk.pause();T.run=false}
 /* ===== desenho: personagens, cenários ===== */
 const imgs=new WeakMap();
-function getImg(b){if(!b)return null;let i=imgs.get(b);if(!i){i=new Image();i.src=URL.createObjectURL(b);imgs.set(b,i)}return i.complete&&i.naturalWidth?i:null}
+const IH=document.createElement('div');IH.style.cssText='position:fixed;left:0;top:0;width:2px;height:2px;overflow:hidden;opacity:.02;pointer-events:none;z-index:-1';document.body.append(IH);
+function getImg(b){if(!b)return null;let i=imgs.get(b);if(!i){i=new Image();i.src=URL.createObjectURL(b);imgs.set(b,i);IH.append(i);while(IH.children.length>80)IH.firstChild.remove()}return i.complete&&i.naturalWidth?i:null}
 function drawChar(g,c,x,y,u,po,t,fr){const sc=c.scale*u/160;let dx=0,dy=0,r=0,sy=1;
 if(c.anim==='bounce')dy=-Math.abs(Math.sin(Math.PI*fr))*12;else if(c.anim==='shake')dx=Math.sin(t*50)*(1-fr)*4;else if(c.anim==='sway')r=Math.sin(t*Math.PI)*.06;
 const pim=po&&c.ps&&c.ps[po]||null;if(pim){}else if(po===1){dx-=16;r-=.18}else if(po===2)sy=.86;else if(po===3)sy=1.12;else if(po===4){dx+=16;r+=.18}else if(po===5){dx+=Math.sin(t*60)*3;sy=.9;r+=.06}
@@ -308,9 +309,9 @@ function initNew(){$('#pn').value='Meu mod';$('#nb').value='';taps2=[];newPz={pl
 $('#tp').onclick=e=>{const b=e.target.closest('button');if(!b)return;tpl=b.dataset.t;if(tpl==='demo'){const bp=nbv();if(!bp){tpl='empty';$$('#tp button').forEach(x=>x.classList.toggle('on',x.dataset.t==='empty'));$('#nb').focus();return toast('Digite o BPM para gerar as notas de exemplo.','err')}newNotes=mk('x','demo',bp).notes;nx=0}else newNotes=[];nneDraw();$$('#tp button').forEach(x=>x.classList.toggle('on',x===b))};
 const PZK=[[0,'Parado','•'],[1,'Esquerda','←'],[2,'Baixo','↓'],[3,'Cima','↑'],[4,'Direita','→'],[5,'Erro de nota','✕']];
 let newPz={pl:{},op:{}},pzURL=[],newMp3=null,newMp3Dur=0;
-function renderPz(){pzURL.forEach(u=>URL.revokeObjectURL(u));pzURL=[];[['pl','#pzpl'],['op','#pzop']].forEach(([w,sel])=>{$(sel).innerHTML=PZK.map(([k,n,ic])=>{const b=newPz[w][k],u=b?URL.createObjectURL(b):'';if(u)pzURL.push(u);return`<label class="pk pz${b?' f':''}" data-w=${w} data-k=${k}><input type=file accept=".png"><span class=x data-x=1>✕</span><span class=ic>${ic}</span><img alt="" src="${u}"><span>${n}</span></label>`}).join('')})}
+function renderPz(){pzURL.forEach(u=>URL.revokeObjectURL(u));pzURL=[];[['pl','#pzpl'],['op','#pzop']].forEach(([w,sel])=>{$(sel).innerHTML=PZK.map(([k,n,ic])=>{const b=newPz[w][k],u=b?URL.createObjectURL(b):'';if(u)pzURL.push(u);return`<label class="pk pz${b?' f':''}" data-w=${w} data-k=${k}><input type=file accept="image/*,.png,.jpg,.jpeg,.webp,.gif,.apng,.avif,.bmp"><span class=x data-x=1>✕</span><span class=ic>${ic}</span><img alt="" src="${u}"><span>${n}</span></label>`}).join('')})}
 ['#pzpl','#pzop'].forEach(sel=>{$(sel).onclick=e=>{if(e.target.dataset.x){e.preventDefault();const b=e.target.closest('.pz');delete newPz[b.dataset.w][+b.dataset.k];renderPz()}};
-$(sel).onchange=async e=>{const i=e.target,b=i.closest('.pz'),f=i.files&&i.files[0];if(!b||!f)return;const w=b.dataset.w,k=+b.dataset.k;busy('Validando PNG…');try{if(f.type!=='image/png'&&!/\.png$/i.test(f.name))throw Error('Somente imagens PNG são aceitas.');await checkImg(f);newPz[w][k]=new Blob([f],{type:'image/png'});renderPz();busy()}catch(er){busy();i.value='';toast(er.message,'err')}}});
+$(sel).onchange=async e=>{const i=e.target,b=i.closest('.pz'),f=i.files&&i.files[0];if(!b||!f)return;const w=b.dataset.w,k=+b.dataset.k;busy('Validando imagem…');try{await checkImg(f);newPz[w][k]=new Blob([f],{type:imgType(f)});renderPz();busy()}catch(er){busy();i.value='';toast(er.message,'err')}}});
 function setNewMp3(f,d){newMp3=f;newMp3Dur=d||0;$('#nmp3n').textContent=f?'🎵 '+f.name+' ('+fmt(d)+')':'Nenhum áudio escolhido';$('#nmp3x').style.display=f?'':'none'}
 $('#nmp3f').onchange=async e=>{const i=e.target,f=i.files&&i.files[0];if(!f)return;busy('Validando MP3…');try{if(!/\.mp3$/i.test(f.name)||(f.type&&f.type!=='audio/mpeg'&&f.type!=='audio/mp3'))throw Error('Somente arquivos MP3 são aceitos.');if(f.size>3e7)throw Error('Áudio maior que 30 MB.');const d=await new Promise((r,j)=>{const a=new Audio();a.preload='metadata';a.onloadedmetadata=()=>r(a.duration);a.onerror=()=>j(Error('Não foi possível ler o MP3. O arquivo pode estar corrompido.'));a.src=URL.createObjectURL(f)});if(!isFinite(d)||d<1)throw Error('Duração do áudio inválida.');setNewMp3(f,d);busy()}catch(er){busy();toast(er.message,'err')}i.value=''};
 $('#nmp3x').onclick=()=>setNewMp3(null,0);
@@ -319,7 +320,7 @@ function setNewBg(k,img,name){newBg=img?'img':k;newBgImg=img||null;$$('#nbg butt
 const t=mk('x','empty',120);t.stage.bg=newBg;t.stage.bgImg=newBgImg;const pv=()=>{$('#nbgp').src=thumb(t)};pv();if(img)[150,400,900].forEach(ms=>setTimeout(pv,ms))}
 $('#nbg').onclick=e=>{const b=e.target.closest('button');if(b)setNewBg(b.dataset.b,null)};
 $('#nbgx').onclick=()=>setNewBg('neon',null);
-$('#nbgf').onchange=async e=>{const i=e.target,f=i.files&&i.files[0];i.value='';if(!f)return;busy('Validando imagem…');try{await checkImg(f);setNewBg('neon',new Blob([f],{type:f.type||MIME[f.name.split('.').pop().toLowerCase()]||'image/png'}),f.name);busy()}catch(er){busy();toast(er.message,'err')}};
+$('#nbgf').onchange=async e=>{const i=e.target,f=i.files&&i.files[0];i.value='';if(!f)return;busy('Validando imagem…');try{await checkImg(f);setNewBg('neon',new Blob([f],{type:imgType(f)}),f.name);busy()}catch(er){busy();toast(er.message,'err')}};
 const nbv=()=>{const v=parseFloat(String($('#nb').value).replace(',','.'));return v>0&&isFinite(v)?Math.round(Math.min(v,999)*100)/100:0};
 const setNb=v=>{$('#nb').value=Math.max(1,Math.round(v*100)/100);nneDraw()};
 $('#nbm').onclick=()=>setNb((nbv()||121)-1);$('#nbp').onclick=()=>setNb((nbv()||119)+1);
@@ -566,8 +567,8 @@ $('#cp').onclick=e=>{const b=e.target.closest('button');if(!b)return;cpose=+b.da
 const POSEN=['Parado','Esquerda','Baixo','Cima','Direita','Erro de nota'];
 function poseMarks(){const c=C();$$('#cp button').forEach(b=>{const k=+b.dataset.p,has=k?!!(c.ps&&c.ps[k]):!!c.img;b.textContent=(has?'✓ ':'')+b.dataset.n})}
 $$('#cp button').forEach(b=>b.dataset.n=b.textContent);
-$('#ci').onclick=()=>pick('.png',async f=>{busy('Validando PNG…');try{if(f.type!=='image/png'&&!/\.png$/i.test(f.name))throw Error('Somente imagens PNG são aceitas.');await checkImg(f);const bl=new Blob([f],{type:'image/png'}),c=C();if(cpose)(c.ps=c.ps||{})[cpose]=bl;else c.img=bl;save();poseMarks();busy();toast('PNG da pose "'+POSEN[cpose]+'" aplicado a '+c.name+'.')}catch(e){busy();toast(e.message,'err')}});
-$('#cr2').onclick=()=>{const c=C(),has=cpose?!!(c.ps&&c.ps[cpose]):!!c.img;if(!has)return toast('A pose "'+POSEN[cpose]+'" não tem PNG.','err');if(cpose)delete c.ps[cpose];else c.img=null;save();poseMarks();toast('PNG da pose removido.')};
+$('#ci').onclick=()=>pick(IMGACC,async f=>{busy('Validando imagem…');try{await checkImg(f);const bl=new Blob([f],{type:imgType(f)}),c=C();if(cpose)(c.ps=c.ps||{})[cpose]=bl;else c.img=bl;save();poseMarks();busy();toast('Imagem da pose "'+POSEN[cpose]+'" aplicada a '+c.name+'.')}catch(e){busy();toast(e.message,'err')}});
+$('#cr2').onclick=()=>{const c=C(),has=cpose?!!(c.ps&&c.ps[cpose]):!!c.img;if(!has)return toast('A pose "'+POSEN[cpose]+'" não tem imagem.','err');if(cpose)delete c.ps[cpose];else c.img=null;save();poseMarks();toast('PNG da pose removido.')};
 $('#co').onclick=()=>{P.stage.opp=C().id;if(P.stage.pl===C().id)P.stage.pl=P.chars.find(c=>c.id!==C().id).id;save();chips();toast(C().name+' é o oponente.')};
 $('#cj').onclick=()=>{P.stage.pl=C().id;if(P.stage.opp===C().id)P.stage.opp=P.chars.find(c=>c.id!==C().id).id;save();chips();toast(C().name+' é o jogador.')};
 $('#cd').onclick=async()=>{if(P.chars.length<=2)return toast('O projeto precisa de pelo menos 2 personagens.','err');if(await ask('Excluir personagem?',{text:'"'+C().name+'" será removido do projeto.',ok:'Excluir',danger:true})){const id=C().id;P.chars.splice(selC,1);const f=P.chars[0].id,g=(P.chars[1]||P.chars[0]).id;if(P.stage.opp===id)P.stage.opp=P.stage.pl===f?g:f;if(P.stage.pl===id)P.stage.pl=P.stage.opp===f?g:f;selC=0;save();initChars()}};
@@ -585,8 +586,8 @@ function selItem(){const s=P.stage;if(SEL.t==='chr'){const c=P.chars.find(k=>k.i
 function mvInfo(){const q=selItem(),o=q.o;$('#mvi').textContent=q.t==='bg'?'x '+(o.bgX||0)+'% · y '+(o.bgY||0)+'% · tam '+(o.bgS||1):'x '+Math.round(o.x)+'% · y '+Math.round(o.y)+'% · tam '+(q.t==='chr'?o.scale:(o.s||1))}
 function mvRender(){if(!P)return;const s=P.stage,nm=id=>{const c=P.chars.find(k=>k.id===id);return c?c.name:'?'};selItem();
 const it=[['bg','','🖼 Fundo'],['chr',s.opp,'🎤 '+nm(s.opp)],['chr',s.pl,'🎮 '+nm(s.pl)]].concat((s.objs||[]).map(o=>['obj',o.id,'📦 '+o.name]));
-$('#mvl').innerHTML=it.map(([t,id,n])=>`<button data-t=${t} data-id="${esc(id)}" class="${SEL.t===t&&SEL.id===id?'on':''}">${esc(n)}</button>`).join('')+'<label class=pk>+ Objeto<input type=file id=mvo accept=".png"></label>';
-const q=selItem();$('#mvx').innerHTML=q.t==='bg'?'<label class=pk>🖼 Imagem de fundo<input type=file id=mvb accept=".png,.jpg,.jpeg,.webp,.gif"></label>':q.t==='obj'?`<button data-x=layer>${q.o.f?'Passar p/ trás':'Passar p/ frente'}</button><button data-x=del class="btn d">🗑</button>`:'';
+$('#mvl').innerHTML=it.map(([t,id,n])=>`<button data-t=${t} data-id="${esc(id)}" class="${SEL.t===t&&SEL.id===id?'on':''}">${esc(n)}</button>`).join('')+'<label class=pk>+ Objeto<input type=file id=mvo accept="image/*,.png,.jpg,.jpeg,.webp,.gif,.apng,.avif,.bmp"></label>';
+const q=selItem();$('#mvx').innerHTML=q.t==='bg'?'<label class=pk>🖼 Imagem de fundo<input type=file id=mvb accept="image/*,.png,.jpg,.jpeg,.webp,.gif,.apng,.avif,.bmp"></label>':q.t==='obj'?`<button data-x=layer>${q.o.f?'Passar p/ trás':'Passar p/ frente'}</button><button data-x=del class="btn d">🗑</button>`:'';
 $('#mvc').classList.toggle('off',!mvOpen);$('#mvt').textContent=mvOpen?'▾':'▴';mvInfo()}
 $('#mvt').onclick=()=>{mvOpen=!mvOpen;mvRender()};
 $('#mvl').onclick=e=>{const b=e.target.closest('button[data-t]');if(!b)return;SEL={t:b.dataset.t,id:b.dataset.id};mvRender()};
@@ -602,7 +603,7 @@ $('#mvr').onclick=()=>{const q=selItem(),o=q.o;if(q.t==='bg'){o.bgX=0;o.bgY=0;o.
 $('#mvx').onclick=async e=>{const b=e.target.closest('[data-x]');if(!b)return;const q=selItem();if(q.t!=='obj')return;if(b.dataset.x==='layer'){q.o.f=!q.o.f;save();mvRender()}else if(await ask('Remover objeto?',{text:'"'+q.o.name+'" será removido da fase.',ok:'Remover',danger:true})){P.stage.objs=P.stage.objs.filter(x=>x!==q.o);SEL={t:'bg',id:''};save();mvRender()}};
 $('#mvx').onchange=async e=>{if(e.target.id!=='mvb')return;const f=e.target.files[0];e.target.value='';if(!f)return;await importImg(f,'bg');initStage()};
 $('#mvl').onchange=async e=>{if(e.target.id!=='mvo')return;const f=e.target.files[0];e.target.value='';if(!f)return;const s=P.stage;s.objs=s.objs||[];if(s.objs.length>=12)return toast('Máximo de 12 objetos por fase.','err');
-busy('Validando PNG…');try{if(f.type!=='image/png'&&!/\.png$/i.test(f.name))throw Error('Somente imagens PNG são aceitas.');await checkImg(f);const o={id:uid(),name:f.name.replace(/\.png$/i,'').slice(0,18)||'Objeto',img:new Blob([f],{type:'image/png'}),x:50,y:60,s:1,f:false};s.objs.push(o);SEL={t:'obj',id:o.id};save();busy();mvRender();toast('Objeto adicionado.')}catch(er){busy();toast(er.message,'err')}};
+busy('Validando imagem…');try{await checkImg(f);const o={id:uid(),name:f.name.replace(/\.[a-z0-9]+$/i,'').slice(0,18)||'Objeto',img:new Blob([f],{type:imgType(f)}),x:50,y:60,s:1,f:false};s.objs.push(o);SEL={t:'obj',id:o.id};save();busy();mvRender();toast('Objeto adicionado.')}catch(er){busy();toast(er.message,'err')}};
 scv.onpointerdown=e=>{scv.setPointerCapture(e.pointerId);const r=scv.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top,s=P.stage;let b=null,bd=r.width*.2;
 [s.opp,s.pl].forEach(id=>{const c=P.chars.find(k=>k.id===id);if(!c)return;const d=Math.hypot(x-c.x/100*r.width,y-(c.y/100*r.height-r.height*.18));if(d<bd){bd=d;b={k:'chr',o:c}}});
 (s.objs||[]).forEach(o=>{const d=Math.hypot(x-o.x/100*r.width,y-o.y/100*r.height);if(d<Math.max(24,r.height*.15*(o.s||1))&&d<=bd){bd=d;b={k:'obj',o}}});
@@ -647,7 +648,9 @@ if(now-T.jt<650){g.globalAlpha=1-(now-T.jt)/650;g.fillStyle=T.jd==='Errou'?'#ff5
 if(raw<0){g.fillStyle='#ffb02e';g.font='900 90px system-ui';g.fillText(Math.ceil(-raw),W/2,H*.4)}
 if(T.hp<=0)finish(false);else if(t>T.last+1.5||t>P.dur+2)finish(true)}
 /* ===== importação ===== */
-async function checkImg(f){if(!/^image\/(png|jpe?g|webp|gif)$/.test(f.type)&&!/\.(png|jpe?g|webp|gif)$/i.test(f.name))throw Error('Formato de imagem não aceito. Use PNG, JPG, WebP ou GIF.');if(f.size>5e6)throw Error('Imagem maior que 5 MB ('+(f.size/1e6).toFixed(1)+' MB). Reduza o tamanho e tente de novo.');
+const IMGACC='image/*,.png,.jpg,.jpeg,.webp,.gif,.apng,.avif,.bmp',IMGRX=/^image\/(png|apng|jpe?g|webp|gif|avif|bmp|x-ms-bmp)$/,IMGEX=/\.(png|apng|jpe?g|webp|gif|avif|bmp)$/i;
+const imgType=f=>/^image\//.test(f.type)&&IMGRX.test(f.type)?f.type:MIME[(f.name.split('.').pop()||'').toLowerCase()]||'image/png';
+async function checkImg(f){if(!IMGRX.test(f.type)&&!IMGEX.test(f.name))throw Error('Formato de imagem não aceito. Use PNG, JPG, WebP, GIF (animado), APNG, AVIF ou BMP.');if(f.size>12e6)throw Error('Imagem maior que 12 MB ('+(f.size/1e6).toFixed(1)+' MB). Reduza o tamanho e tente de novo.');
 await new Promise((r,j)=>{const i=new Image();i.onload=r;i.onerror=()=>j(Error('O arquivo está corrompido ou não é uma imagem válida.'));i.src=URL.createObjectURL(f)})}
 async function importImg(f,kind){if(!P)return toast('Abra um projeto antes de importar.','err');busy('Validando imagem…');try{await checkImg(f);const b=new Blob([f],{type:f.type||MIME[f.name.split('.').pop().toLowerCase()]});
 if(kind==='spr'){C().img=b}else if(kind==='bg'){P.stage.bgImg=b;P.stage.bg='img'}else P.cover=b;save();busy();toast(kind==='spr'?'Sprite aplicado a '+C().name+'.':kind==='bg'?'Fundo da fase importado.':'Capa do projeto importada.')}catch(e){busy();toast(e.message,'err')}}
@@ -672,7 +675,7 @@ function unzip(buf){const v=new DataView(buf),u=new Uint8Array(buf),o={},dc=new 
 if(m!==0||(fl&8))throw Error('ZIP compactado não suportado. Use um ZIP exportado pelo Funkin Maker (sem compressão).');const s=p+30+nl+el;o[name]=u.slice(s,s+cs);p=s+cs}
 if(!Object.keys(o).length)throw Error('O arquivo não é um ZIP válido ou está vazio.');return o}
 /* ===== exportar / importar projeto ===== */
-async function exportProject(p,share,meta){busy('Gerando pacote ZIP…');try{const F=[],u8=async b=>new Uint8Array(await b.arrayBuffer()),ext=b=>(b.type.split('/')[1]||'bin').replace('jpeg','jpg').replace('mpeg','mp3'),en=new TextEncoder();
+async function exportProject(p,share,meta){busy('Gerando pacote ZIP…');try{const F=[],u8=async b=>new Uint8Array(await b.arrayBuffer()),ext=b=>(b.type.split('/')[1]||'bin').replace('jpeg','jpg').replace('mpeg','mp3').replace('x-ms-bmp','bmp'),en=new TextEncoder();
 const j=JSON.parse(JSON.stringify(p,(k,v)=>v instanceof Blob?null:v));delete j.sub;delete j.inbox;
 if(p.audio){const n='song/audio.'+((p.audioName.split('.').pop()||'').toLowerCase()||ext(p.audio));F.push({name:n,data:await u8(p.audio)});j.audio=n}
 for(const c of p.chars){if(c.img){const n='images/char-'+c.id+'.'+ext(c.img);F.push({name:n,data:await u8(c.img)});j.chars.find(x=>x.id===c.id).img=n}

@@ -1,6 +1,6 @@
 /* Service worker do Funkin Maker Mobile: deixa o app instalável e funcionando offline.
    Ao publicar uma versão nova do jogo, troque o número em VERSAO para forçar a atualização. */
-const VERSAO = 'fmm-v2';
+const VERSAO = 'fmm-v3';
 const BASE = ['/', '/index.html', '/manifest.json', '/logo.png', '/icon-192.png', '/icon-512.png', '/icon-maskable.png', '/apple-touch-icon.png'];
 
 self.addEventListener('install', e => {
